@@ -1,0 +1,19 @@
+#Tic Tac Toe
+
+s1, s2, s3, s4, s5, s6, s7, s8, s9 = '', '', '', '', '', '', '', '', ''
+
+grid = [[s1, s2, s3], [s4, s5, s6], [s7, s8, s9]]
+
+player_symbol = 'X'
+
+def start():
+    print('____________________________________________')
+    print('Welcome to Tic Tac Toe!')
+    print('____________________________________________')
+    ans = input('Woule you like to be \n1. X\n2. O\n(You will go first no matter what you choose :) )\n')
+    if ans == '2':
+        player_symbol = 'O'
+    turn(1)
+def turn(one_or_two):
+    pass
+start()
