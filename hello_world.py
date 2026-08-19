@@ -1,14 +1,14 @@
 #Elizabeth Tanner
 #Tic Tac Toe
 
-s = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-spaces = [[s[0], s[1], s[2]], [s[3], s[4], s[5]], [s[6], s[7], s[8]]]
+s = ['1', '2', '3', '4', '5', '6', '7', '8', '9']  #spaces in board
+
 
 x_or_o = 'X'
 p2 = 'O'
 turn = 1
 
-def main():
+def main():       #main function
     global x_or_o, p2, s, spaces, turn
     if turn > 1:
         rating = input('Please rate this game out of 5 stars: ')
@@ -20,14 +20,13 @@ def main():
         print('\n\nYour review has been saved!\n\n\n"' + ans + '"')
     turn = 1
     s = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-    spaces = [[s[0], s[1], s[2]], [s[3], s[4], s[5]], [s[6], s[7], s[8]]]
     #welcome message
     print('_________________________________________________________')
     print('Welcome to Tic Tac Toe!!!!')
     print('You will be given the option to be X or O.')
     print('No matter what you choose, you will go first.')
     print('So far you must verse a real person, but computers\nare coming soon')
-    #print('***Note: Computers are simple and easy to beat***')
+    #print('***Note: Computers are simple and easy to beat***') #add this when i code in a computer
     print('_________________________________________________________')
     print('Press enter to continue.')
     input()
@@ -42,7 +41,7 @@ def main():
     tic_tac_toe()
 
 
-def print_board():
+def print_board():  #prints the board
     global s
     print(f'  {s[0]} | {s[1]} | {s[2]}')
     print('____|___|____')
@@ -57,7 +56,7 @@ def tic_tac_toe():
     print('\n'*50)
     print_board()
     print('\n'*3)
-    if turn % 2 ==1:
+    if turn % 2 ==1:  #if the turn is divisible by one it is player ones turn
         print('Player 1')
         print('_____________')
         sign = x_or_o
@@ -67,13 +66,13 @@ def tic_tac_toe():
         sign = p2
     while True:
         space = input('Please enter in the number of space you would like to take: ')
-        try:
+        try:           #error proofs the int(space) and accessing the index in s
             space = int(space)
             if s[space - 1] == str(space):
                 break
             print('It must be an unoccupied square.')
 
-        except:
+        except:                                              
             print('Please only enter a NUMBER 1-9')
     s[space - 1] = sign
     turn += 1
@@ -97,7 +96,7 @@ def check_win(sign):
         tie = True
         for i in s:
             if i != 'X' and i != 'O':
-                tie = False
+                tie = False           #if there isnt an x or o then it is empty and unchosen. thus it can't be a tie.
                 break
         if not tie:
             tic_tac_toe()
