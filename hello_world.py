@@ -102,4 +102,6 @@ def check_win(sign):
             ans = input()
             if 'y' in ans: 
                 main()
+            #no need for an else to stop it
+
 main()
