@@ -1,7 +1,9 @@
+#Elizabeth Tanner
 #Tic Tac Toe
 
 s = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 spaces = [[s[0], s[1], s[2]], [s[3], s[4], s[5]], [s[6], s[7], s[8]]]
+
 x_or_o = 'X'
 p2 = 'O'
 turn = 1
@@ -39,6 +41,7 @@ def main():
     input('For now we only have a 2 person option, okay?\n')
     tic_tac_toe()
 
+
 def print_board():
     global s
     print(f'  {s[0]} | {s[1]} | {s[2]}')
@@ -47,6 +50,7 @@ def print_board():
     print('____|___|____')
     print(f'  {s[6]} | {s[7]} | {s[8]}')
     print('    |   |')
+
 
 def tic_tac_toe():
     global spaces, s, turn
@@ -75,6 +79,7 @@ def tic_tac_toe():
     turn += 1
     print(sign)
     check_win(sign)
+
 
 def check_win(sign):
     global s
