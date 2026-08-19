@@ -3,13 +3,13 @@
 
 s = ['1', '2', '3', '4', '5', '6', '7', '8', '9']  #spaces in board
 
-
+name = ''
 x_or_o = 'X'
 p2 = 'O'
 turn = 1
 
 def main():       #main function
-    global x_or_o, p2, s, spaces, turn
+    global x_or_o, p2, s, spaces, turn, name
     if turn > 1:
         rating = input('Please rate this game out of 5 stars: ')
         if '5' in rating or 'five' in rating:
@@ -18,11 +18,14 @@ def main():       #main function
             print('Thank you for your feedback!')
         ans = input('Please leave a review! (This is not an option! You must write your review)\n')
         print('\n\nYour review has been saved!\n\n\n"' + ans + '"')
+    else:
+        print('What\'s your name?')
+        name = input()
     turn = 1
     s = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     #welcome message
     print('_________________________________________________________')
-    print('Welcome to Tic Tac Toe!!!!')
+    print('Welcome to Tic Tac Toe, '+ name + '!!!!')
     print('You will be given the option to be X or O.')
     print('No matter what you choose, you will go first.')
     print('So far you must verse a real person, but computers\nare coming soon')
