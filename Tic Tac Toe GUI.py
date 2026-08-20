@@ -32,7 +32,7 @@ def check_win():
             break
         tie = True
     if tie:
-        l = Label(root, text='It\'s a Tie!', font = ('Courier', 50))
+        l = Label(root, text='It\'s a Tie!', font = ('Courier', 40))
         l.grid(row=3, columnspan=3)
     turn += 1
     
