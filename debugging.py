@@ -1,3 +1,4 @@
+#Elizabeth Tanner debugging
 name = "Alex"
 age = 16
 #name is spelled wrong (it was spelled as nam)
