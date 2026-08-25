@@ -23,7 +23,7 @@ class Body:
         self.y = y 
     def move_left(self):
         canvas.move(self.square, -40, 0)
-        self.y -= 40
+        self.x -= 40
         self.d = 'left'
     def move_down(self):
         canvas.move(self.square, 0, 40)
@@ -46,7 +46,7 @@ class Snake:
         self.length = length
         self.x = x_coord
         self.y = y_coord
-
+        
 b = Body(39, 39, direction)
 b.move_right()
 
